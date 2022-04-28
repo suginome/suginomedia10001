@@ -32,7 +32,7 @@
             @csrf
               <div class="content-item">
                 <p class="direction">■下記のキーワードから最低3つを用いてお書きください。</p>
-                <p class="keywords">森、原木、文化的、天地返し、循環型</p>
+                <p class="keywords">森、原木、文化的、循環型</p>
                 <input type="textarea" class="summary" name="user_sakubun" cols="50" rows="5" value="{{old('user_sakubun')}}">
               </div>
             <!--</form>-->
