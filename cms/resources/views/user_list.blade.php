@@ -6,7 +6,7 @@
             <table class="table table-striped task-table">
                 <!-- テーブルヘッダ -->
                 <thead>
-                    <th>本一覧</th>
+                    <th>投稿一覧</th>
                     <th>&nbsp;</th>
                 </thead>
                 <!-- テーブル本体 -->
