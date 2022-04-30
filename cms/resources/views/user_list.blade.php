@@ -13,23 +13,23 @@
                 <tbody>
                     @foreach ($books as $book)
                         <tr>
-                            <!-- 本タイトル -->
+                            <!-- 氏名 -->
                             <td class="table-text">
                                 <div>{{ $book->user_name }}</div>
                             </td>
                             
                             
-                            <!-- 本タイトル -->
+                            <!-- メールアドス -->
                             <td class="table-text">
                                 <div>{{ $book->user_email }}</div>
                             </td>
                             
-                            <!-- 本タイトル -->
+                            <!-- 作文 -->
                             <td class="table-text">
                                 <div>{{ $book->user_sakubun }}</div>
                             </td>
                             
-                            <!-- 本タイトル -->
+                            <!-- 希望購入金額 -->
                             <td class="table-text">
                                 <div>{{ $book->user_price }}</div>
                             </td>

@@ -24,6 +24,7 @@ Route::get('/', [BookController::class, 'index']);
 
 Route::get('/list', [BookController::class, 'show']);
 
+Route::get('/toppage', [BookController::class, 'create']);
 
 // Route::group(['middleware' => 'auth'], function(){
     // 新「本」を追加

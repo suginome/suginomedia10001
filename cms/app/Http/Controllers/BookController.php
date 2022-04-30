@@ -26,7 +26,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view("/toppage");//
     }
 
     /**
@@ -101,10 +101,10 @@ class BookController extends Controller
 		// バリデーション
 		$validator = Validator::make($request->all(), [
 		    'id' => 'required', // storeに対しての追加分
-		    'item_name' => 'required|min:3|max:255',
-		    'item_number' => 'required|min:1|max:3',
-		    'item_amount' => 'required|max:6',
-		    'published' => 'required',
+		    'user_name' => 'required|min:3|max:255',
+		    'user_email' => 'required|min:3|max:255',
+		    'user_sakubun' => 'required|min:3|max:255',
+		    'user_price' => 'required',
 		]);
 
 		// バリデーション:エラー
@@ -115,12 +115,12 @@ class BookController extends Controller
 		}
 
         $book = Book::find($request->id);
-        $book->item_name =    $request->item_name;
-        $book->item_number =  $request->item_number;
-        $book->item_amount =  $request->item_amount;
-        $book->published =    $request->published;
+        $book->user_name =    $request->user_name;
+        $book->user_email =  $request->user_email;
+        $book->user_sakubun =  $request->user_sakubun;
+        $book->user_price =    $request->user_price;
         $book->save(); 
-        return redirect('/');
+        return redirect('list');
     }
 
     /**
@@ -132,6 +132,6 @@ class BookController extends Controller
     public function destroy(Book $book)
     {
         $book->delete();
-        return redirect('/');
+        return redirect('user_list');
     }
 }
