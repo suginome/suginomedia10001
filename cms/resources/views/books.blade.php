@@ -21,12 +21,11 @@
         <p class="section-text">■産地直送動画をじっくりご覧ください。</p>
         <!--<video controls width="100%" src="images/vtr_horitafarm2.mp4" ></video>-->
         <div class="movie">
-          <iframe width="560" height="315" src="{{ url('https://www.youtube.com/embed/ul47TOLFc5Q') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="movie-item"></iframe>
+          <!--<iframe width="560" height="315" src="{{ url('https://www.youtube.com/embed/ul47TOLFc5Q') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="movie-item"></iframe>-->
+            <iframe width="100%" src="https://www.youtube.com/embed/ul47TOLFc5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        
-        <iframe width="100%" src="https://www.youtube.com/embed/ul47TOLFc5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-        
+              
+              
         <div class="content">
           <!--<form action="#" method="post" class="movie-form">-->
           <form action="{{ url('books') }}" method="POST" class="form-horizontal">
