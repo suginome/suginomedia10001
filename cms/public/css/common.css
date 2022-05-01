@@ -131,6 +131,23 @@ header {
   margin-left: 30px;
 }
 
+/*作文以下の部分隠す*/
+
+/*.hidden-content{*/
+/* visibility:hidden;*/
+/*}*/
+
+/*.hidden-content1{*/
+/* display:none;*/
+/*}*/
+
+
+
+/*.hidden-content2{*/
+/* display:none;*/
+/*}*/
+
+
 /* 生産者情報 */
 .item{
   padding: 10px 30px;

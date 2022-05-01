@@ -81,5 +81,32 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('.hidden-content1').hide();
+            
+            $(".movie").on('click',function(){
+             setTimeout(function(){
+                $('.hidden-content1').show();
+             },2000);
+            });
+        });
+    </script>
+    <script>
+        $(function(){
+            $('.hidden-content2').hide();
+            
+            $('.summary').on('input', function() {
+                var subject = $('.summary')[0].value;
+                if (subject.indexOf('森') !== -1 && subject.indexOf('循環') !== -1 ) {
+                   $('.hidden-content2').show();
+                } 
+               
+            });
+        });
+    </script>
+    
+    
 </body>
 </html>

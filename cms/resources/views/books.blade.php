@@ -20,61 +20,67 @@
         
         <p class="section-text">■産地直送動画をじっくりご覧ください。</p>
         <!--<video controls width="100%" src="images/vtr_horitafarm2.mp4" ></video>-->
-        <div class="movie">
-          <!--<iframe width="560" height="315" src="{{ url('https://www.youtube.com/embed/ul47TOLFc5Q') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="movie-item"></iframe>-->
-            <iframe width="100%" src="https://www.youtube.com/embed/ul47TOLFc5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-              
-              
-        <div class="content">
-          <!--<form action="#" method="post" class="movie-form">-->
-          <form action="{{ url('books') }}" method="POST" class="form-horizontal">
-            @csrf
-              <div class="content-item">
-                <p class="direction">■下記のキーワードから最低3つを用いてお書きください。</p>
-                <p class="keywords">森、循環型</p>
-                <textarea class="summary" name="user_sakubun" cols="40" rows="5" value="{{old('user_sakubun')}}"></textarea>
-              </div>
-            <!--</form>-->
-            <div class="hidden-content">
-              <p class="section-text"></p>
-              <!--<div class="item-syousai">-->
-                <p class="section-image"><img src="images/producer-image2.jpeg" alt="しいたけ"></p>
-                <!--<div>-->
-                  <p class="product-title">肉厚プリプリ食感の生しいたけ【300g×3袋】</p>
-                  <p class="product-price">最低小売価格2,200円（税込）〜</p>
-              <!--  </div>-->
-              <!--</div>-->
-              <!--<form action="#" method="post" class="hidden-form">-->
-                <ul class="form-item">
-                  <li class="form-list">
-                    <label for="name" class="direction">■購入希望金額を税込で入力してください</label>
-                    <input type="number" name="user_price" min="2200" max="110000" placeholder="最低：2,200円" class="form-parts" value="{{old('user_price')}}">
-                    
-                    
-                    <p class="caution">生産者希望小売価格※※円を超える場合、差額は全額生産者へ</p>
-                  </li>
-                  <li class="form-list">
-                    <div class="form-list__item">
-                    
-                      <label for="email">氏名</label>
-                    </div>
-                    <input type="textarea" name="user_name" id="user_name" class="form-parts" value="{{old('user_name')}}">
-                    
-                      <label for="email">メールアドレス</label>
-                      <span class="required">必須</span>
-                    </div>
-                    <input type="email" name="user_email" id="email" class="form-parts" value="{{old('user_email')}}">
-                    <p class="caution">追って購入URLを送付させていただきます。<br>正しいメールアドレスをご入力ください。</p>
-                  </li>
-                  <button type="submit"  class="form-btn">送信</button>
-                </ul>
-            </form>
+        <!--<a class="movie-button">-->
+          <div class="movie">
+            <iframe width="560" height="315" src="{{ url('https://www.youtube.com/embed/ul47TOLFc5Q?controls=0?rel=0') }}" modestbranding=1  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="movie-item"></iframe>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
+        <!--</a>-->
+        <!--<iframe width="100%" src="https://www.youtube.com/embed/ul47TOLFc5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+        
+          <div class="hidden-content">
+            
+            <div class="content">
+              <!--<form action="#" method="post" class="movie-form">-->
+              <form action="{{ url('books') }}" method="POST" class="form-horizontal">
+                @csrf
+                <div class="content-item hidden-content1">
+                  <p class="direction">■下記のキーワードから最低3つを用いてお書きください。</p>
+                  <p class="keywords">森、循環型</p>
+                  <textarea class="summary" name="user_sakubun" cols="40" rows="5" value="{{old('user_sakubun')}}"></textarea>
+                </div>
+                <!--</form>-->
+                <p id="output"></p>
+                
+                <p class="section-text"></p>
+                <!--<div class="item-syousai">-->
+                  <!--<p class="section-image"><img src="images/producer-image2.jpeg" alt="しいたけ"></p>-->
+                  <!--<div>-->
+                  
+                <div class="hidden-content2">
+                      <p class="product-title">肉厚プリプリ食感の生しいたけ【300g×3袋】</p>
+                      <p class="product-price">最低小売価格2,200円（税込）〜</p>
+                  <!--  </div>-->
+                  <!--</div>-->
+                  <!--<form action="#" method="post" class="hidden-form">-->
+                    <ul class="form-item">
+                      <li class="form-list">
+                        <label for="name" class="direction">■購入希望金額を税込で入力してください</label>
+                        <input type="number" name="user_price" min="2200" max="110000" placeholder="最低：2,200円" class="form-parts" value="{{old('user_price')}}">
+                        
+                        
+                        <p class="caution">生産者希望販売価格2200円を超える場合、差額は生産者へ応援資金とさせていただきます。</p>
+                      </li>
+                      <li class="form-list">
+                        <div class="form-list__item">
+                        
+                          <label for="email">氏名</label>
+                        </div>
+                        <input type="textarea" name="user_name" id="user_name" class="form-parts" value="{{old('user_name')}}">
+                        
+                          <label for="email">メールアドレス</label>
+                          <span class="required">必須</span>
+                        <!--</div>-->
+                        <input type="email" name="user_email" id="email" class="form-parts" value="{{old('user_email')}}">
+                        <p class="caution">追って購入URLを送付させていただきます。<br>正しいメールアドレスをご入力ください。</p>
+                      </li>
+                      <button type="submit"  class="form-btn">送信</button>
+                    </ul>
+                  </form>
+                </div><!-- .hidden-content2 -->
+              </div><!-- .content -->
+          </div><!-- .hidden-content  -->
+        </div><!-- .inner -->  
+      </section>
+  
+    </main>
 @endsection
