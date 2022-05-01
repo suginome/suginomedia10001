@@ -14,10 +14,16 @@ img {
   height: auto;
 }
 .inner {
-  padding: 0 15px;
+  
+    padding: 10px 30px;
+    
 }
+
+
+
+
 .heading, .sub-heading {
-  padding: 40px 0;
+  padding: 20px 0;
   font-size: 3rem;
   text-align: center;
   letter-spacing: 0.25em;
@@ -91,7 +97,7 @@ header {
   color: #fff;
 }
 .hero .hero-text {
-  margin-bottom: 5px;
+  margin-bottom: ８px;
 }
 
 /* リード文 */
@@ -126,6 +132,13 @@ header {
 }
 
 /* 生産者情報 */
+.item{
+  padding: 10px 30px;
+  border: 1px solid #d4d4d4;
+  margin: 5px 15px 30px 15px;
+}
+
+
 .producer .heading {
   padding: 10px;
   font-size: 4rem;
@@ -136,8 +149,9 @@ header {
 }
 
 .producer-info .wrap {
-  display: flex;
-  margin-bottom: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .producer-info .wrap.point {
@@ -215,16 +229,16 @@ header {
 }
 
 /* .content .movie-form */
-.content .movie-form {
+.content  {
   margin-bottom: 50px;
 }
-.content .movie-form textarea.summary .keywords {
+.content .summary .keywords {
   margin-bottom: 5px;
 }
-.content .movie-form textarea.summary { 
+.content .summary { 
   /*.content の中の .movie-formの中の 
   .summaryというクラスがついたtextareaタグ*/
-  max-width: 355px;
+  width: 100%;
   margin: 0 auto 20px;
   padding: 10px;
   border: 1px solid #d4d4d4;

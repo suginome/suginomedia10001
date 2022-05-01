@@ -19,9 +19,10 @@
         
         
         <p class="section-text">■産地直送動画をじっくりご覧ください。</p>
-        <!--<div class="movie">-->
-        <!--  <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="movie-item"></iframe>-->
-        <!--</div>-->
+        <!--<video controls width="100%" src="images/vtr_horitafarm2.mp4" ></video>-->
+        <div class="movie">
+          <iframe width="560" height="315" src="{{ url('https://www.youtube.com/embed/ul47TOLFc5Q') }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="movie-item"></iframe>
+        </div>
         
         <iframe width="100%" src="https://www.youtube.com/embed/ul47TOLFc5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         
@@ -32,8 +33,8 @@
             @csrf
               <div class="content-item">
                 <p class="direction">■下記のキーワードから最低3つを用いてお書きください。</p>
-                <p class="keywords">森、原木、文化的、循環型</p>
-                <input type="textarea" class="summary" name="user_sakubun" cols="50" rows="5" value="{{old('user_sakubun')}}">
+                <p class="keywords">森、循環型</p>
+                <textarea class="summary" name="user_sakubun" cols="40" rows="5" value="{{old('user_sakubun')}}"></textarea>
               </div>
             <!--</form>-->
             <div class="hidden-content">
